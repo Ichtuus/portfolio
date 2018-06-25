@@ -9,9 +9,9 @@ class ProjectManager
     private $db;
 
     /***constructor of connexion*/
-    public function __construct(PDO $connexion)
+    public function __construct(PDO $connect)
     {
-        $this->db=$connexion;
+        $this->db=$connect;
     }
 
 

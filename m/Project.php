@@ -5,7 +5,7 @@
 class Project
 {
 
-    private $idproject, $name, $description, $date, $link, $util_idutil;
+    private $idproject, $name, $description, $thedate, $link, $util_idutil;
 
     /***Constructor*/
     public function __construct(array $datas)
@@ -43,9 +43,9 @@ class Project
         return $this->description;
     }
 
-    public function getDate()
+    public function getThedate()
     {
-        return $this->date;
+        return $this->thedate;
     }
 
     public function getLink()
@@ -76,9 +76,9 @@ class Project
         $this->description = html_entity_decode($description);
     }
 
-    public function setDate($date)
+    public function setThedate($thedate)
     {
-        $this->date = $date;
+        $this->thedate = $thedate;
     }
 
     public function setLink($link)

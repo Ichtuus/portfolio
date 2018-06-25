@@ -37,8 +37,11 @@ require "v/footer.php";
 <!-- Css -->
 <link rel="stylesheet" href="assets/css/main.css" />
 
+
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/ajax.js"></script>
+

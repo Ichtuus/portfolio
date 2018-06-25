@@ -6,9 +6,9 @@ if(isset($_GET['p'])){
         case "detailProject":
             require "v/detailProject";
             break;
-        }
+    }
 
-    }else{
+}else{
     $recupProject=$Project->listProject();
     if($recupProject){
         foreach ($recupProject as $item){
@@ -17,5 +17,5 @@ if(isset($_GET['p'])){
     }else{
         $listView="No project";
     }
-        require "v/home.php";
+    require "v/home.php";
 }
