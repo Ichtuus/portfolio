@@ -12,11 +12,12 @@
     <div class="inner">
         <div class="content">
             <h1>Nicolas Diarra</h1>
-            <h2>Venez découvrir mon travail<br/>
-                Développeur Web.</h2>
-            <a href="#" class="button big alt"><span>C'est parti !</span></a>
+            <h2>All of my work here<br/>
+                good navigation
+            </h2>
+            <a href="#" class="button big alt"><span>Let's Go !</span></a>
         </div>
-        <a href="#" class="button hidden"><span>C'est parti !</span></a>
+        <a href="#" class="button hidden"><span>Let's Go !</span></a>
     </div>
 </header>
 <div>
@@ -24,11 +25,11 @@
         if(isset($_SESSION['permission'])){
             switch ($_SESSION['permission']) {
                 case 1:
-                    $info = "<p style='position: absolute;left:88%;'>Vous êtes Administrateur</p>";
+                    $info = "<p style='position: absolute;left:88%;'>You are administrator</p>";
                     break;
 
                 case 2:
-                    $info = "<p style='position: absolute;left:88%;'>Vous êtes Anonymes";
+                    $info = "<p style='position: absolute;left:88%;'>You are anonymous";
                     break;
             }
             echo $info;

@@ -21,6 +21,8 @@ spl_autoload_register(function ($nameClass) {
     require_once "m/$nameClass.php";
 });
 
+
+
 if(isset($_SESSION['permission'])){
     if($_SESSION['permission']==1){
         require_once 'c/adminController.php';
@@ -28,6 +30,7 @@ if(isset($_SESSION['permission'])){
         require_once 'c/userController.php';
     }
 }else{
+
     require_once 'c/publicController.php';
 }
 /***view footer */
@@ -36,6 +39,7 @@ require "v/footer.php";
 
 <!-- Css -->
 <link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
 
 <!-- Scripts -->
