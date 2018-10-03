@@ -25,4 +25,18 @@ class ProjectManager
         }
     }
 
+
+    /***function who take one project*/
+    public function oneProject(int $id){
+        $list = $this->db->query("SELECT p.*,u.* FROM project p INNER JOIN util u ON p.utilidutil=u.idutil WHERE p.idproject=?");
+        $request = $this->db->prepare($list);
+        $request->bindValue(1,$id,PDO::PARAM_INT);
+        $request->execute();
+        if($request->rowCount()){
+            return $request->fetch(PDO::FETCH_ASSOC);
+        }else{
+            return false;
+        }
+    }
+
 }

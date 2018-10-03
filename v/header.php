@@ -38,10 +38,33 @@
 
     if(!isset($_SESSION['permission'])){
         ?>
+        <!--
         <div id="connexion">
             <input type="text" id="theName" placeholder="Login">
             <input type="password" id="password" placeholder="Password">
-            <button onclick="connexion()">Send</button>
+            <button onclick="connexion()" >Send</button>
+        </div>-->
+        <label class="modal-btn" for="modal-toggle">Click me</label>
+
+        <input id="modal-toggle" type="checkbox">
+        <label class="modal-backdrop" for="modal-toggle"></label>
+        <div class="modal-content">
+
+            <div class="tabs">
+                <!--  LOG IN  -->
+                <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
+                <label for="tab-1" class="table"><span>Login</span></label>
+                <div class="tabs-content">
+                    <div class="login_socnet">
+                        <img src="./images/nasif.png">
+                    </div>
+                    <form action="">
+                        <input id="theName" type="text" placeholder="Login" required>
+                        <input id="password" type="password" placeholder="Password" required>
+                        <input  type="submit" value="Log In" onclick="connexion()">
+                    </form>
+                </div>
+            </div>
         </div>
         <?php
     }else{

@@ -4,7 +4,14 @@ if(isset($_GET['p'])){
     switch ($_GET['p']){
 
         case "detailProject":
-            require "v/detailProject";
+            $idProject=(int)$_GET["detailProject"];
+            $recupProject=$Project->oneProject($idProject);
+            if(!$recupProject){
+                $listView="Project doesn't exist";
+            }else{
+                $listView=new Project($recupProject);
+            }
+            require "v/detailProject.php";
             break;
     }
 
@@ -17,5 +24,5 @@ if(isset($_GET['p'])){
     }else{
         $listView="No project";
     }
-    require "v/home.php";
+   require "v/home.php";
 }
