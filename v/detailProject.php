@@ -1,4 +1,5 @@
-<!-- Main --><?php
+<!-- Maù
+in --><?php
 # aaa066 create detail view
 
 if(is_string($listView)){
@@ -13,7 +14,7 @@ if(is_string($listView)){
         <div class="content">
             <header>
 
-                <h2><?= $listView->getName(); ?></h2>
+                <h2><?= $listView->getThename(); ?></h2>
 
             </header>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec est ligula, ultrices id posuere vitae,

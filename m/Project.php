@@ -5,7 +5,9 @@
 class Project
 {
 
-    private $idproject, $name, $description, $thedate, $link, $util_idutil;
+    private $idproject, $thename, $description, $thedate, $link, $utilIdutil;
+
+    private $surname,$idutil,$theName;
 
     /***Constructor*/
     public function __construct(array $datas)
@@ -33,10 +35,13 @@ class Project
         return $this->idproject;
     }
 
-    public function getName()
+
+    public function getThename()
     {
-        return $this->name;
+        return $this->thename;
     }
+
+
 
     public function getDescription()
     {
@@ -55,7 +60,7 @@ class Project
 
     public function getUtilIdutil()
     {
-        return $this->util_idutil;
+        return $this->utilIdutil;
     }
 
     /**
@@ -66,10 +71,15 @@ class Project
         $this->idproject = (int) $idproject;
     }
 
-    public function setName($name)
+    /**
+     * @param mixed $thename
+     */
+    public function setThename($thename): void
     {
-        $this->name = $name;
+        $this->thename = $thename;
     }
+
+
 
     public function setDescription($description)
     {
@@ -86,10 +96,44 @@ class Project
         $this->link = $link;
     }
 
-    public function setUtilIdutil($util_idutil)
+    public function setUtilIdutil($utilIdutil)
     {
-        $this->util_idutil = $util_idutil;
+        $this->util_idutil = $utilIdutil;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @param mixed $surname
+     */
+    public function setSurname($surname): void
+    {
+        $this->surname = $surname;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdutil()
+    {
+        return $this->idutil;
+    }
+
+    /**
+     * @param mixed $idutil
+     */
+    public function setIdutil($idutil): void
+    {
+        $this->idutil = $idutil;
+    }
+
+
 
 
 

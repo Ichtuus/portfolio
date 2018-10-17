@@ -4,8 +4,8 @@ if(isset($_GET['p'])){
     switch ($_GET['p']){
 
         case "detailProject":
-            $idProject=(int)$_GET["detailProject"];
-            $recupProject=$Project->oneProject($idProject);
+            $idProject=(int)$_GET["id"];
+            $recupProject=$Project->detailProject($idProject);
             if(!$recupProject){
                 $listView="Project doesn't exist";
             }else{

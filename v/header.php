@@ -4,22 +4,12 @@
     <title>Nasif</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Css -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <body>
 
-<!-- Header -->
-<header id="header">
-    <div class="inner">
-        <div class="content">
-            <h1>Nicolas Diarra</h1>
-            <h2>All of my work here<br/>
-                good navigation
-            </h2>
-            <a href="#" class="button big alt"><span>Let's Go !</span></a>
-        </div>
-        <a href="#" class="button hidden"><span>Let's Go !</span></a>
-    </div>
-</header>
 <div>
     <?php
         if(isset($_SESSION['permission'])){
@@ -54,6 +44,7 @@
                 <!--  LOG IN  -->
                 <input class="radio" id="tab-1" name="tabs-name" type="radio" checked>
                 <label for="tab-1" class="table"><span>Login</span></label>
+
                 <div class="tabs-content">
                     <div class="login_socnet">
                         <img src="./images/nasif.png">

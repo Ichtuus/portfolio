@@ -39,4 +39,16 @@ class ProjectManager
         }
     }
 
+    public function detailProject(int $id){
+        $sql="SELECT pr.idproject, pr.thename, pr.description, pr.thedate,pr.link,pr.utilIdutil,u.idutil,u.surname,u.theName FROM project pr INNER JOIN util u ON pr.utilIdutil=u.idutil WHERE pr.idproject=?;";
+        $request=$this->db->prepare($sql);
+        $request->bindValue(1,$id,PDO::PARAM_INT);
+        $request->execute();
+        if($request->rowCount()){
+            return $request->fetch(PDO::FETCH_ASSOC);
+        }else{
+            return false;
+        }
+    }
+
 }

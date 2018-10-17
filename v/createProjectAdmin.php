@@ -5,7 +5,8 @@
 if(isset($error)) echo "<h3>$error</h3>";
 ?>
 <form action="" name="oneName" method="post">
-    <input type="text" name="thetitle" placeholder="Le titre" required><br>
+    <input type="text" name="name" placeholder="Le titre" required><br>
+    <input type="file" name="nom" /><br>
     <textarea name="thetext" placeholder="Votre texte" required></textarea><br>
     <input type="hidden" name="utilIdutil" value="<?=$_SESSION['idutil']?>">
     <!-- # aaa098 before choosing a datetime picker -->

@@ -2,7 +2,7 @@
 	session_start();
 	if(isset($_SESSION['theName'])){
 		echo "Bienvenue ".$_SESSION['theName']." !";
-		echo "<script>setTimeout(function(){location.replace('../');}, 3000)</script>";
+		echo "<script>setTimeout(function(){location.replace('../?p=admin');}, 3000)</script>";
 		}else if(isset($_GET['code'])){
 			switch($_GET['code']){
 				case 403:
@@ -16,10 +16,10 @@
 					break;
 
 				default:
-					header('Location: ../');
+					header('Location: ../?p=admin');
 			}
 
 		}else{
-			header('Location: ../');
+			header('Location: ../?p=admin');
 	}
 ?>
